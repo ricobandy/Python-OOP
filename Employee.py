@@ -1,6 +1,6 @@
 # Employee Class
-
 class Employee:
+    
     # defining the constructor
     def __init__(self, ID=None, salary=0, department=None):
         self.ID = ID
@@ -14,23 +14,31 @@ class Employee:
     def salaryPerDay(self):
         return self.salary / 30
 
+    # method overloading
+    def demo(self, a, b, c, d=5, e=None):
+        print("a =", a)
+        print("b =", b)
+        print("c =", c)
+        print("d =", d)
+        print("e =", e)
+
     # defining class methods
 
 # Test the class by creating an object of the class
-Steve = Employee(10, 5000, "customer support")
-Charles = Employee()
+Steve = Employee()
 
 # Print the object
-print("Steve")
-print("ID:", Steve.ID)
-print("Salary:", Steve.salary)
-print("Department:", Steve.department)
-print()
-print("Charles")
-print("ID:", Charles.ID)
-print("Salary:", Charles.salary)
-print("Department:", Charles.department)
+print("Demo 1")
+Steve.demo(1, 2, 3)
+print("\n")
 
+print("Demo 2")
+Steve.demo(1, 2, 3, 4)
+print("\n")
+
+print("Demo 3")
+Steve.demo(1, 2, 3, 4, 5)
+print("\n")
 
 
 
